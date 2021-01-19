@@ -13,7 +13,7 @@ const questions = [
     {
         type: "input",
         message: 'Please give a "SHORT-DESCRIPTION" of your app:', 
-        name: "description"
+        name: "description"              
     },
     {
         type: "input",
@@ -38,7 +38,7 @@ const questions = [
     {
         type: "input",
         message: 'Please select the "LICENSE-TYPE" for your app:',
-        name: "licenceType"
+        name: "licenseType"
     },
     {
         type: "input",
@@ -71,7 +71,21 @@ function writeToFile(fileName, data, githubInputs) {
         if (error) {
             throw error;
         };    
-        console.log("A NEW README FILE HAS BEEN GENERATED!");          
+        console.log("A NEW README.md FILE HAS BEEN GENERATED!"); 
+        console.log(`The information entered will be used in the READEME.md file`);  
+        console.log(`
+        \n for a Title, you entered: ${data.title}  
+        \n for a Description: ${data.description}
+        \n for Installation Instructions, you entered: ${data.installationInstructions}
+        \n for Usage Information, you entered: ${data.usageInformatoin}
+        \n for Contribution Guidelines, you entered: ${data.contributionGuidelines}
+        \n for Test Instructions, you entered: ${data.testInstruction}
+        \n for License Type, you entered: ${data.licnseType}
+        \n for the Repo Link, you entered: ${data.repoLink}
+        \n for the liveLink, you entered: ${data.liveLink}
+        \n for your userName, you entered: ${data.userName}
+        \n for your eMail, you entered: ${data.eMail}
+        `)    
         });
 
 }
@@ -90,7 +104,7 @@ function init() {
                 profile: userInputs.data.html_url,
                 name: userInputs.data.name                
             };            
-                writeToFile("README-testing_0.1.md", data, githubInputs);
+                writeToFile("README-testing_0.2.md", data, githubInputs);
         });
 });
 
