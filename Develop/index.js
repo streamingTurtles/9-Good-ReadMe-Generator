@@ -64,8 +64,15 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(data, githubInputs) {
-
+function writeToFile(fileName, data, githubInputs) {
+    // https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+    fs.writeFile(fileName, generateMarkdown(data, githubInputs), error => {
+        // handle any issues while writing file if any, else notify successful file creation 
+        if (error) {
+            throw error;
+        };    
+        console.log("A NEW README FILE HAS BEEN GENERATED!");          
+        });
 
 }
 
@@ -74,6 +81,7 @@ function init() {
     inquirer
     .prompt(questions)
     .then(data => {
+        // https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
         const queryUrl = `https://api.github.com/users/${data.username}`;
         axios.get(queryUrl).then(userInputs => {            
             const githubInputs = {
@@ -82,13 +90,7 @@ function init() {
                 profile: userInputs.data.html_url,
                 name: userInputs.data.name                
             };            
-                fs.writeFile("README.md", generateMarkdown(data, githubInputs), error => {
-                if (error) {
-                    throw error;
-                };    
-                console.log("A NEW README FILE HAS BEEN GENERATED!");          
-                });
-                // writeToFile(data, gethubInputs);
+                writeToFile("README-testing_0.1.md", data, githubInputs);
         });
 });
 
