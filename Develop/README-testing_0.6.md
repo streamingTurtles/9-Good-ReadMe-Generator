@@ -1,19 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data, githubInputs) {
-  return `
-  # Project Title: ${data.title}
+  # Project Title: test6
     
   ## Table of Contents:
   - [Project Description](#Project-Description:)
@@ -30,59 +16,55 @@ function generateMarkdown(data, githubInputs) {
   &nbsp;
   - - -
   ## Project Description:
-  - ${data.description}
+  - test6
 
   &nbsp;
   - - -
   ## Installation Instructions:
-  - ${data.installationInstructions}
+  - test6
 
   &nbsp;
   - - -
   ## Project Usage Information:
-  - ${data.usageInformation}
+  - test6
 
   &nbsp;
   - - -
   ## Contribution Guidelines:
-  - ${data.contributionGuidelines}
+  - test6
 
   &nbsp;
   - - -
   ## Testing Instructions:
-  - ${data.testInstructions}
+  - test6
 
   &nbsp;
   - - -
   ## License Type:
-  - ${data.licenseType}
+  - TBD
 
   &nbsp;
   - - -
   ## gitHub Repo Link:
-  - ${data.repoLink}
+  - https://github.com/streamingTurtles/9-Good-ReadMe-Generator/tree/master/Develop
 
   &nbsp;
   - - -
   ## gitHub Live Web Link:
-  - ${data.liveLink}
+  - https://streamingturtles.github.io/9-Good-ReadMe-Generator/index.html
 
   &nbsp;
   - - -
   ## gitHub Information:
 
   ![Streaming Turtles, LLC](https://avatars2.githubusercontent.com/u/1152009?v=4)
-- user name: ${data.userName}
+- user name: streamingturtles
 - [GitHub Profile](https://github.com/streamingTurtles)
 
   ## my eMail for Questions & Information:
-  - ${data.eMail}  
+  - pcardillo@streamingturtles.com  
 
   &nbsp;
 - - -
 - - -
 Peter Cardillo, Columbia Engineering Fullstack Bootcamp, 2020-2021  
-`;
-}
-
-module.exports = generateMarkdown;

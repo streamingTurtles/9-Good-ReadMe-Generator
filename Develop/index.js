@@ -72,15 +72,16 @@ function writeToFile(fileName, data, githubInputs) {
             throw error;
         };    
         console.log("A NEW README.md FILE HAS BEEN GENERATED!"); 
-        console.log(`The information entered will be used in the READEME.md file`);  
+        console.log("Testing FORMATTING and bullets & git Avitar");       
+        console.log(`The information entered will be used in the README-testing_0.6.md file`);          
         console.log(`
         \n for a Title, you entered: ${data.title}  
         \n for a Description: ${data.description}
         \n for Installation Instructions, you entered: ${data.installationInstructions}
-        \n for Usage Information, you entered: ${data.usageInformatoin}
+        \n for Usage Information, you entered: ${data.usageInformation}
         \n for Contribution Guidelines, you entered: ${data.contributionGuidelines}
-        \n for Test Instructions, you entered: ${data.testInstruction}
-        \n for License Type, you entered: ${data.licnseType}
+        \n for Test Instructions, you entered: ${data.testInstructions}
+        \n for License Type, you entered: ${data.licenseType}
         \n for the Repo Link, you entered: ${data.repoLink}
         \n for the liveLink, you entered: ${data.liveLink}
         \n for your userName, you entered: ${data.userName}
@@ -104,7 +105,7 @@ function init() {
                 profile: userInputs.data.html_url,
                 name: userInputs.data.name                
             };            
-                writeToFile("README-testing_0.2.md", data, githubInputs);
+                writeToFile("README-testing_0.6.md", data, githubInputs);
         });
 });
 
