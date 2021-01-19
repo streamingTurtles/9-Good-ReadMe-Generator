@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require('fs');
-const generate = require('utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
+const axios = require('axios');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -63,10 +64,37 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data, githubInputs) {
+
+
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then(data => {
+        const queryUrl = `https://api.github.com/users/${data.username}`;
+        axios.get(queryUrl).then(userInputs => {            
+            const githubInputs = {
+                githubPic: userInputs.data.avatar_url,
+                email: userInputs.data.email,
+                profile: userInputs.data.html_url,
+                name: userInputs.data.name                
+            };            
+                fs.writeFile("README.md", generateMarkdown(data, githubInputs), error => {
+                if (error) {
+                    throw error;
+                };    
+                console.log("A NEW README FILE HAS BEEN GENERATED!");          
+                });
+                // writeToFile(data, gethubInputs);
+        });
+});
+
+
+
+}
 
 // Function call to initialize app
 init();
