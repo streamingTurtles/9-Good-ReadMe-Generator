@@ -37,8 +37,8 @@ const questions = [
     },
     {
         type: "input",
-        message: 'Please select the "LICENSE-TYPE" for your app:',
-        name: "licenseType"
+        message: 'Please select the "LICENSE-TYPE" for your app:\n enter 1: for MIT License\n enter 2: for BSD License\n enter 3: for Apache License\n enter 4: for Creative Commons License\n enter 5: for GNU License\n enter 6: for IBM License\n enter 7: for Mozilla License   ',
+        name: "licenseType",
     },
     {
         type: "input",
@@ -72,8 +72,8 @@ function writeToFile(fileName, data, githubInputs) {
             throw error;
         };    
         console.log("A NEW README.md FILE HAS BEEN GENERATED!"); 
-        console.log("Testing FORMATTING and bullets & git Avitar");       
-        console.log(`The information entered will be used in the README-testing_0.6.md file`);          
+        console.log("Testing adding the license badges and links");       
+        console.log(`The information entered will be used in the README-testing_0.8.md file`);          
         console.log(`
         \n for a Title, you entered: ${data.title}  
         \n for a Description: ${data.description}
@@ -88,8 +88,8 @@ function writeToFile(fileName, data, githubInputs) {
         \n for your eMail, you entered: ${data.eMail}
         `)    
         });
-
 }
+
 
 // TODO: Create a function to initialize app
 function init() {
@@ -98,14 +98,17 @@ function init() {
     .then(data => {
         // https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
         const queryUrl = `https://api.github.com/users/${data.username}`;
+        const licenseBadge = `${data.licenseType}`
+        console.log(`you selected number ${data.licenseType}`)
         axios.get(queryUrl).then(userInputs => {            
             const githubInputs = {
                 githubPic: userInputs.data.avatar_url,
                 email: userInputs.data.email,
                 profile: userInputs.data.html_url,
-                name: userInputs.data.name                
-            };            
-                writeToFile("README-testing_0.6.md", data, githubInputs);
+                name: userInputs.data.name,
+                licensBadge: userInputs.data.licenseType               
+            };                   
+                writeToFile("README-testing_0.8.md", data, githubInputs);
         });
 });
 
