@@ -1,5 +1,5 @@
 
-  # Project Title: 
+  # Project Title: Tile of app goes here
     
   ## Table of Contents:
   - [Project Description](#Project-Description:)
@@ -16,53 +16,53 @@
   &nbsp;
   - - -
   ## Project Description:
-  - 
+  - short description
 
   &nbsp;
   - - -
   ## Installation Instructions:
-  - 
+  - installation goes here
 
   &nbsp;
   - - -
   ## Project Usage Information:
-  - 
+  - usage
 
   &nbsp;
   - - -
   ## Contribution Guidelines:
-  - 
+  - contributions
 
   &nbsp;
   - - -
   ## Testing Instructions:
-  - 
+  - tests
 
   &nbsp;
   - - -
   ## License Type:
-  - [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+  - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   &nbsp;
   - - -
   ## gitHub Repo Link:
-  - 
+  - https://github.com/streamingTurtles/9-Good-ReadMe-Generator/tree/master/Develop
 
   &nbsp;
   - - -
   ## gitHub Live Web Link:
-  - 
+  - https://github.com/streamingTurtles/9-Good-ReadMe-Generator/tree/master/Develop
 
   &nbsp;
   - - -
   ## gitHub Information:
 
   ![Streaming Turtles, LLC](https://avatars2.githubusercontent.com/u/1152009?v=4)
-- user name: 
+- user name: streamingturtles
 - [GitHub Profile](https://github.com/streamingTurtles)
 
   ## my eMail for Questions & Information:
-  -   
+  - pcardillo@streamingturtles.com  
 
   &nbsp;
 - - -

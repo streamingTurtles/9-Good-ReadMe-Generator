@@ -3,46 +3,47 @@
 // var badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
 var badge = 'not assigned - empty';  // for testing purposes to track before user selecting a license to apply
 function renderLicenseBadge(data) {
- console.log("I am HAPPY :) ");
- console.log(`${data.licenseType}`);
+//  console.log("I am inside renderLicenseBadge() function "); // tesing 
+//  console.log(`${data.licenseType}`);  // testing code, show what License # user selected at prompt
 //  list of markdown license badges from Shields.io:
 //  https://gist.github.com/artem-solovev/e1602722f84835f35daef4dfb3df5500  
   switch(`${data.licenseType}`){
     case "1": // for MIT License     
       badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;
     case "2": // for BSD 2-Clause License     
       badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;
     case "3": // for Apache 2.0 License    
       badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;
     case "4": // for Creative Commons License CC BY 4.0    
       badge = "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)(http://creativecommons.org/licenses/by/4.0/)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;      
     case "5": // for GNU GPL v3 License     
       badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;
     case "6": // for IBM Public License Version 1.0
       badge = "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break;
     case "7": // for Mozilla Public License 2.0     
       badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
-      console.log("I got in the switch case,  badge is: ", badge); // testing code
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code
       break; 
     case "" :
       badge = "NO LICENSE HAS BEEN SELECTED"  
-      console.log("I got in the switch case,  badge is: ", badge); // testing code, for the empty case condition
+      // console.log("I got in the switch case,  badge is: ", badge); // testing code, for the empty case condition
       break;          
   }
-  console.log("badge is: ", badge); // testing code
+  // console.log("badge is: ", badge);  // testing code
 }
+
 
 
 // TODO: Create a function that returns the license link
@@ -62,6 +63,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data, githubInputs) {
   renderLicenseBadge(data); // function call to add the user selected the license badge 
+  console.log('');// need to get back into this generateMarkdown() function after calling renderLicenseBadge() - the console.log() will force the rest of the code in this function to run, i.e. - `backtick` stuff in the return
   return `
   # Project Title: ${data.title}
     

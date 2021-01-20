@@ -72,8 +72,9 @@ function writeToFile(fileName, data, githubInputs) {
             throw error;
         };    
         console.log("A NEW README.md FILE HAS BEEN GENERATED!"); 
-        console.log("Testing adding the license badges and links");       
-        console.log(`The information entered will be used in the README-testing_0.8.md file`);          
+        console.log(`The information entered will be used in the README.md file`);
+        // console.log("Testing adding the license badges and links");       
+        // console.log(`The information entered will be used in the README-testing_0.8.md file`);          
         console.log(`
         \n for a Title, you entered: ${data.title}  
         \n for a Description: ${data.description}
@@ -99,7 +100,7 @@ function init() {
         // https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
         const queryUrl = `https://api.github.com/users/${data.username}`;
         const licenseBadge = `${data.licenseType}`
-        console.log(`you selected number ${data.licenseType}`)
+        // console.log(`you selected number ${data.licenseType}`) // for testing
         axios.get(queryUrl).then(userInputs => {            
             const githubInputs = {
                 githubPic: userInputs.data.avatar_url,
@@ -108,7 +109,7 @@ function init() {
                 name: userInputs.data.name,
                 licensBadge: userInputs.data.licenseType               
             };                   
-                writeToFile("README-testing_0.8.md", data, githubInputs);
+                writeToFile("README.md", data, githubInputs);
         });
 });
 
