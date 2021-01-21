@@ -12,6 +12,14 @@
   - [Github Live Web Link](#github-live-web-link)
   - [Github Information](#github-information)
   - [my-email-for-questions-and-information](#my-email-for-questions-and-information)
+  - [Video Demo of this App running](https://drive.google.com/file/d/1Kyv42J8LFpPHozBL9SpcvEG-AiruLC4h/view)
+
+  
+  &nbsp;
+  - - -
+  ## Screenshot of App running in the terminal:
+  ![Screenshot](screenShot-of-app-running.png)
+
 
   &nbsp;
   - - -
