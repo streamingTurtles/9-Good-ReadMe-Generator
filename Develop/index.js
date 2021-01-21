@@ -109,7 +109,7 @@ function init() {
                 name: userInputs.data.name,
                 licensBadge: userInputs.data.licenseType               
             };                   
-                writeToFile("README.md", data, githubInputs);
+                writeToFile("your-README.md", data, githubInputs);
         });
 });
 
