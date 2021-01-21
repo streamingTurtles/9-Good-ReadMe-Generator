@@ -68,16 +68,16 @@ function generateMarkdown(data, githubInputs) {
   # Project Title: ${data.title}
     
   ## Table of Contents:
-  - [Project Description](#Project-Description:)
-  - [Installation Instructions](#Installation-Instructions:)
-  - [Project Usage Information](#Project-Usage-Information:)
-  - [Contribution Guidelines](#Contribution-Guidelines:)
-  - [Testing Instructions](#Testing-Instructions:)
-  - [License Type](#License-Type:)
-  - [gitHub Repo Link](#gitHub-Repo-Link:)
-  - [gitHub Live Web Link](#gitHub-Live-Web-Link:)
-  - [gitHub Informaton](#gitHub-Information:)
-  - [my eMail](#my-eMail-for-Questions-&-Information:)
+  - [Project Description](#project-description)
+  - [Installation Instructions](#installation-instructions)
+  - [Project Usage Information](#project-usage-information)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Testing Instructions](#testing-instructions)
+  - [License Type](#license-type)
+  - [Github Repo Link](#github-repo-link)
+  - [Github Live Web Link](#github-live-web-link)
+  - [Github Information](#github-information)
+  - [my-email-for-questions-and-information](#my-email-for-questions-and-information)
 
   &nbsp;
   - - -
@@ -116,18 +116,18 @@ function generateMarkdown(data, githubInputs) {
 
   &nbsp;
   - - -
-  ## gitHub Live Web Link:
+  ## Github Live Web Link:
   - ${data.liveLink}
 
   &nbsp;
   - - -
-  ## gitHub Information:
+  ## Github Information:
 
   ![Streaming Turtles, LLC](https://avatars2.githubusercontent.com/u/1152009?v=4)
 - user name: ${data.userName}
 - [GitHub Profile](https://github.com/streamingTurtles)
 
-  ## my eMail for Questions & Information:
+  ## my-email-for-questions-and-information:
   - ${data.eMail}  
 
   &nbsp;
